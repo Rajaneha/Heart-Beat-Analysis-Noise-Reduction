@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 280px;
+  left: 50%;
+  margin-left: -150px;
+  height: 180px;
+  top: 50%;
+  margin-top: -100px;
+  background: #FFF;
+  border: 3px solid #F04A49;
+  z-index: 20;
+}
+
+#popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+}
+
+#popup:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  z-index: -1;
+}
+
+</style>
+<script>
+$ = function(id) {
+  return document.getElementById(id);
+}
+
+var show = function(id) {
+	$(id).style.display ='block';
+}
+var hide = function(id) {
+	$(id).style.display ='none';
+}
+</script>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p style="text-align:justify;padding-left:20px">It's Difficult to separate heart beat dataset to make it easier we have desingned an model.
+	Using tensorflow and keras rnn model is built and the given heart beat is analysed and predicted</p>
+ <p style="text-align:justify;padding-left:20px;padding-right:30px"> An estimated 17.1 million people died from CVDs in 2004, representing 29% of all global deaths.
+  Of these deaths, an estimated 7.2 million were due to coronary heart disease. Any method which can help to detect signs of heart disease.
+ The problem is of particular interest to machine learning researchers as it involves classification of audio sample data, where distinguishing between classes of interest is non-trivial. 
+  Data is gathered in real-world situations and frequently contains background noise of every conceivable type. The differences between heart sounds corresponding to different heart symptoms 
+	 can also be extremely subtle and challenging to separate.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://static.thenounproject.com/png/1002547-200.png" alt="Jane" style="width:70%">
+      <div class="container">
+        <h2>Kamal</h2>
+        <p class="title">Team Mate</p>
+        <p>Contributor</p>
+        <p>21pd17@psgtech.ac.in</p>
+        <button class="button" href="#" onclick="show('popup')">Contact</button>
+			<div class="popup" id="popup">
+			  <p>Request Sent </p>
+			  <p>Will contact you soon </p>
+			  <a href="#" onclick="hide('popup')">Close</a>
+			</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://static.thenounproject.com/png/1002547-200.png" alt="Mike" style="width:70%">
+      <div class="container">
+        <h2>Neha</h2>
+        <p class="title">Team Mate</p>
+        <p>Contributor</p>
+        <p>21pd27@psgtech.ac.in</p>
+        <button class="button" href="#" onclick="show('popup')">Contact</button>
+			<div class="popup" id="popup">
+			  <p>Request Sent </p>
+			  <p>Will contact you soon</p>
+			  <a href="#" onclick="hide('popup')">Close</a>
+			</div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="column">
+    <div class="card">
+      <img src="https://static.thenounproject.com/png/1002547-200.png" alt="John" style="width:70%">
+      <div class="container">
+        <h2>Dhisha</h2>
+        <p class="title">Team Mate</p>
+        <p>Contributor...</p>
+        <p>21pd05@psgtech.ac.in</p>
+        <p><button class="button"href="#" onclick="show('popup')">Contact</button></p>
+			<div class="popup" id="popup">
+			  <p>Request Sent </p>
+			  <p>Our team will  contact you soon</p>
+			  <a href="#" onclick="hide('popup')">Close</a>
+			</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

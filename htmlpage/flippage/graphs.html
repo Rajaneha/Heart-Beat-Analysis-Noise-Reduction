@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PLOT</title>
+  </head>
+  <style>
+ body  {
+  background-image: url("background.png");
+  }
+  
+	.flip-box {
+  background-color: transparent;
+  width: 470px;
+  height: 140px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+	.flip-box1 {
+  background-color: transparent;
+  width: 620px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+	.flip-box2 {
+  background-color: transparent;
+  width: 620px;
+  height: 234px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box3 {
+  background-color: transparent;
+  width: 1000px;
+  height: 430px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box1:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+.flip-box2:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+.flip-box3:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+  .container {
+  display: grid;
+  grid-template-columns:33% 33% 33%;
+  align-items: top;
+  margin-bottom:20px;
+  margin-left:10px;
+
+}
+ .container1 {
+  display: grid;
+  grid-template-columns:50% 40%;
+  align-items: bottom;
+  margin-left:35px;
+
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns:50% 40%;
+  align-items: flex-end;
+  margin-left:35px;
+  margin-top:20px;
+}
+
+.container3 {
+  display: grid;
+  grid-template-columns:90%;
+  align-items: flex-end;
+  margin-left:250px;
+  margin-top:30px;
+}
+
+h2{
+	color:white;
+}
+  </style>
+  <body>
+  <h2>PLOTS</h2>
+    <div class="container">
+		<div class="flip-box">
+			<div class="flip-box-inner">
+				<div class="flip-box-front">
+					<div class="image">
+						<img src="Extrahls.png" alt="Extrahls" style="width:100%">
+					</div>
+				</div>
+					<div class="flip-box-back">
+						<h2>Extrahls</h2>
+						<p>What an amazing city</p>
+					</div>
+			</div>
+		</div>
+		<div class="flip-box">
+			<div class="flip-box-inner">
+				<div class="flip-box-front">
+					<div class="image">
+						<img src="Extrastyole.png" alt="Extrahls" style="width:100%">
+					</div>
+				</div>
+					<div class="flip-box-back">
+						<h2>Extrastyole</h2>
+						<p>What an amazing city</p>
+					</div>
+			</div>
+		</div>
+		<div class="flip-box">
+			<div class="flip-box-inner">
+				<div class="flip-box-front">
+					<div class="image">
+						<img src="Murmur.png" alt="Extrahls" style="width:100%">
+					</div>
+				</div>
+					<div class="flip-box-back">
+						<h2>Murmur</h2>
+						<p>What an amazing city</p>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div>
+	
+	</div>
+	<div class="container">
+		<div class="flip-box">
+			<div class="flip-box-inner">
+				<div class="flip-box-front">
+					<div class="image">
+						<img src="Normal-normalised.png" alt="Extrahls" style="width:100%">
+					</div>
+				</div>
+					<div class="flip-box-back">
+						<h2>Extrahls</h2>
+						<p>What an amazing city</p>
+					</div>
+			</div>
+		</div>
+		<div class="flip-box">
+			<div class="flip-box-inner">
+				<div class="flip-box-front">
+					<div class="image">
+						<img src="Normal-original.png" alt="Extrahls" style="width:100%">
+					</div>
+				</div>
+					<div class="flip-box-back">
+						<h2>Extrastyole</h2>
+						<p>What an amazing city</p>
+					</div>
+			</div>
+		</div>
+		<div class="flip-box">
+			<div class="flip-box-inner">
+				<div class="flip-box-front">
+					<div class="image">
+						<img src="MFCCs.png" alt="Extrahls" style="width:100%;height:140px">
+					</div>
+				</div>
+					<div class="flip-box-back">
+						<h2>Murmur</h2>
+						<p>What an amazing city</p>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="container1">
+		<div class="flip-box1">
+			<div class="flip-box-inner">
+				<div class="flip-box-front">
+					<div class="image">
+						<img src="HTK style.png" alt="Extrahls" style="width:100%;height:300px;">
+					</div>
+				</div>
+					<div class="flip-box-back">
+						<h2>Extrahls</h2>
+						<p>What an amazing city</p>
+					</div>
+			</div>
+		</div>
+		<div class="flip-box1">
+			<div class="flip-box-inner">
+				<div class="flip-box-front">
+					<div class="image">
+						<img src="Onset Strength.png" alt="Extrahls" style="width:100%;height:300px">
+					</div>
+				</div>
+					<div class="flip-box-back">
+						<h2>Extrastyole</h2>
+						<p>What an amazing city</p>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="container2">
+		<div class="flip-box2">
+			<div class="flip-box-inner">
+				<div class="flip-box-front">
+					<div class="image">
+						<img src="Sub-band.png" alt="Extrahls" style="width:100%">
+					</div>
+				</div>
+					<div class="flip-box-back">
+						<h2>Extrahls</h2>
+						<p>What an amazing city</p>
+					</div>
+			</div>
+		</div>
+		<div class="flip-box2">
+			<div class="flip-box-inner">
+				<div class="flip-box-front">
+					<div class="image">
+						<img src="Mean median.png" alt="Extrahls" style="width:100%;height:234px">
+					</div>
+				</div>
+					<div class="flip-box-back">
+						<h2>Extrastyole</h2>
+						<p>What an amazing city</p>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="container3">
+		<div class="flip-box3">
+			<div class="flip-box-inner">
+				<div class="flip-box-front">
+					<div class="image">
+						<img src="p1.png" alt="Extrahls" style="width:100%;height:430px;">
+					</div>
+				</div>
+					<div class="flip-box-back">
+						<h2>Extrahls</h2>
+						<p>What an amazing city</p>
+					</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

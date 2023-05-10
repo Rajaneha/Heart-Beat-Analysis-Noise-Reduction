@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+body{
+	background-color:#adebeb;
+}
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+</style>
+</head>
+<body>
+
+<h2>PLots</h2>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+		<div class="row">
+			<div class="column">
+				<img src="Extrahls.png" alt="Extrahls" style="width:100%">
+				<div class="flip-box-back">
+					<h2>Extrahls</h2>
+					<p>What an amazing city</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="flip-box">
+	<div class="flip-box-inner">
+		<div class="flip-box-front">
+			<div class="column">
+				<img src="Extrastyole.png" alt="Extrastyole" style="width:100%">
+				<div class="flip-box-back">
+					<h2>Extrastyole</h2>
+					<p>What an amazing city</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="flip-box">
+	<div class="flip-box-inner">
+		<div class="flip-box-front">
+			<div class="column">
+				<img src="Murmur.png" alt="Murmur" style="width:100%">
+				<div class="flip-box-back">
+					<h2>Murmur</h2>
+					<p>What an amazing city</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="flip-box">
+	<div class="flip-box-inner">
+		<div class="flip-box-front">
+			<div class="row">
+			  <div class="column">
+				<img src="Normal-normalised.png" alt="Normal" style="width:100%">
+				<div class="flip-box-back">
+						<h2>Normal</h2>
+						<p>What an amazing city</p>
+				</div>
+			  </div>
+		</div>
+	</div>
+</div>
+		  <div class="column">
+			<img src="Normal-original.png" alt="Normal" style="width:100%">
+			<div class="flip-box-back">
+					<h2>Normal</h2>
+					<p>What an amazing city</p>
+			</div>
+		  </div>
+		  <div class="column">
+			<img src="MFCCs.jpg" alt="MFCC" style="width:100%">
+			<div class="flip-box-back">
+					<h2>MFCC</h2>
+					<p>What an amazing city</p>
+			</div>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="column">
+			<img src="HTK style.png" alt="Normal" style="width:100%">
+			<div class="flip-box-back">
+					<h2>Normal</h2>
+					<p>What an amazing city</p>
+			</div>
+		  </div>
+		  <div class="column">
+			<img src="Onset Strength.png" alt="Normal" style="width:100%">
+			<div class="flip-box-back">
+					<h2>Normal</h2>
+					<p>What an amazing city</p>
+			</div>
+		  </div>
+		  <div class="column">
+			<img src="Sub-band.jpg" alt="MFCC" style="width:100%">
+			<div class="flip-box-back">
+					<h2>MFCC</h2>
+					<p>What an amazing city</p>
+			</div>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="column">
+			<img src="Mean median.png" alt="Normal" style="width:100%">
+			<div class="flip-box-back">
+					<h2>Normal</h2>
+					<p>What an amazing city</p>
+			</div>
+		  </div>
+		  <div class="column">
+			<img src="p1.png" alt="Normal" style="width:100%">
+			<div class="flip-box-back">
+					<h2>Normal</h2>
+					<p>What an amazing city</p>
+			</div>
+		  </div>
+		</div>
+	</div>
+  </div>
+</div>	
+
+
+</body>
+</html>
